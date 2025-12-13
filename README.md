@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# @kevinjosec/typekit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Reusable, accessible typography components for React, built with Tailwind CSS.
 
-Currently, two official plugins are available:
+This package provides a set of opinionated typography primitives such as
+Headings, Paragraphs, Labels, and more — designed to be composable and
+easy to integrate into any React + Tailwind project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React components
+- 🎨 Tailwind CSS utility-based styling
+- 🧩 Fully typed with TypeScript
+- 📦 Tree-shakable ES & CJS builds
+- 🧱 Designed as typography primitives (easy to extend)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Using npm:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+npm install @kevinjosec/typekit
+````
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Using yarn:
+
+```bash
+yarn add @kevinjosec/typekit
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Example Usage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { Heading, Paragraph } from "@kevinjosec/typekit";
+
+export default function Example() {
+  return (
+    <div className="space-y-4">
+      <Heading>Welcome</Heading>
+      <Paragraph>
+        This is a reusable typography component.
+      </Paragraph>
+    </div>
+  );
+}
 ```
+
+---
+
+## 🧱 Available Components
+
+* Heading
+* Title
+* Subtitle
+* Subheading
+* Paragraph
+* Lead
+* Caption
+* Label
+* Overline
+* ButtonText
+
+````
+
+---

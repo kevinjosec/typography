@@ -1,4 +1,3 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -14,7 +13,7 @@ export default defineConfig({
     },
     outDir: "dist",
     rollupOptions: {
-      external: ["react", "react-dom"], // don't bundle react
+      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
@@ -22,6 +21,6 @@ export default defineConfig({
         }
       }
     },
-    emptyOutDir: false // important! <- prevents deleting .d.ts files
+    emptyOutDir: false
   }
 });

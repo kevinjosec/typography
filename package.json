@@ -1,6 +1,6 @@
 {
   "name": "@kevinjosec/typekit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -24,10 +24,10 @@
     "react-dom": ">=18"
   },
   "scripts": {
-  "build:css": "tailwindcss -i ./src/index.css -o ./dist/style.css",
-  "build": "tsc -p tsconfig.build.json && vite build && npm run build:css",
-  "prepublishOnly": "npm run build"
-},
+    "build:css": "tailwindcss -i ./src/index.css -o ./dist/style.css",
+    "build": "tsc -p tsconfig.build.json && vite build && npm run build:css",
+    "prepublishOnly": "npm run build"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "clsx": "^2.1.1"
